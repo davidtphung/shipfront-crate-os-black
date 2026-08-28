@@ -453,7 +453,7 @@ def home() -> str:
   </div>
 </section>
 <section class="caps" aria-label="Capabilities">
-  <ul>{{"".join(f"<li>{c}</li>" for c in caps)}}</ul>
+  <ul>{"".join(f"<li>{c}</li>" for c in caps)}</ul>
 </section>
 <section class="band sticky-net" id="network" aria-labelledby="network-heading">
   <div class="sticky-inner">
