@@ -71,3 +71,26 @@ def footer() -> str:
   </div>
   <div class="legal"><p>Built by David T Phung | © 2026 Shipfront</p></div>
 </footer>"""
+
+
+def shell(title: str, description: str, body: str, active: str) -> str:
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>{title}</title>
+<meta name="description" content="{description}"/>
+<meta name="theme-color" content="#000000"/>
+<link rel="icon" href="{BASE}/icon.svg" type="image/svg+xml"/>
+<!-- mark: kunal-1a-even -->
+<link rel="stylesheet" href="{BASE}/site.css"/>
+</head>
+<body>
+{header(active)}
+{body}
+{footer()}
+<script src="{BASE}/site.js"></script>
+</body>
+</html>
+"""
