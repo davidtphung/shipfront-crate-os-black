@@ -1,0 +1,65 @@
+name: pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install
+      - run: bash scripts/pin-stills.sh
+      - run: npm run build
+        env:
+          GITHUB_PAGES: "true"
+          NEXT_PUBLIC_BASE_PATH: /shipfront-crate-os-black
+      - uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: out
+          branch: gh-pages
+          clean: true
+      - uses: actions/upload-pages-artifact@v3
+        continue-on-error: true
+        with:
+          path: out
+      - name: Enable GitHub Pages from gh-pages
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api -X POST repos/${{ github.repository }}/pages \
+            -H "Accept: application/vnd.github+json" \
+            -f source[branch]=gh-pages \
+            -f source[path]='/' \
+          && echo "pages created" \
+          || gh api -X PUT repos/${{ github.repository }}/pages \
+            -H "Accept: application/vnd.github+json" \
+            -f source[branch]=gh-pages \
+            -f source[path]='/' \
+          && echo "pages updated" \
+          || echo "pages API still refused"
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
+        continue-on-error: true
