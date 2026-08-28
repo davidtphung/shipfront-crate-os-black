@@ -1,5 +1,3 @@
-import { CubeMark } from "@/components/cube-mark";
-
 export function OrderFlow() {
   return (
     <figure className="relative overflow-hidden rounded-[20px] border border-[#222] bg-[#000000]">
@@ -9,7 +7,26 @@ export function OrderFlow() {
       </figcaption>
       <div className="flex items-center justify-between border-b border-[#222] px-4 py-3">
         <p className="inline-flex items-center gap-2 font-mono text-[11px] tracking-[0.16em] text-[#9a9a9a] uppercase">
-          <CubeMark className="h-3.5 w-3" />
+          <svg
+            viewBox="0 0 24 26"
+            className="h-3.5 w-3 shrink-0"
+            fill="none"
+            aria-hidden="true"
+          >
+            <g
+              stroke="#FF6A00"
+              strokeWidth="1.25"
+              strokeLinecap="square"
+              strokeLinejoin="miter"
+              strokeMiterlimit={4}
+            >
+              <path d="M7 9 L12 6 L17 9 L12 12 Z" fill="#000000" />
+              <path d="M7 9 L7 16 L12 19 L17 16 L17 9" fill="#000000" />
+              <path d="M12 12 L12 19" />
+              <path d="M12 6 L12 13 L7 16" />
+              <path d="M12 13 L17 16" />
+            </g>
+          </svg>
           Shipfront / Order Flow
         </p>
         <p className="font-mono text-[11px] text-[#9a9a9a]">Illustrative</p>
