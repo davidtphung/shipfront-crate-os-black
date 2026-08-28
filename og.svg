@@ -1,10 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
   <rect width="1200" height="630" fill="#000000"/>
-  <g transform="translate(80 210)" stroke="#FF6A00" stroke-width="6" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="4">
-    <path d="M80 8 L160 54 L80 100 L0 54 Z" fill="#000000"/>
-    <path d="M0 54 L80 100 L80 192 L0 146 Z" fill="#000000"/>
-    <path d="M160 54 L80 100 L80 192 L160 146 Z" fill="#000000"/>
-  </g>
+  <svg x="80" y="190" width="192" height="208" viewBox="0 0 24 26" fill="none">
+    <g stroke="#FF6A00" stroke-width="2.25" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="4">
+      <path d="M7 9 L12 6 L17 9 L12 12 Z" fill="#000000"/>
+      <path d="M7 9 L7 16 L12 19 L17 16 L17 9" fill="#000000"/>
+      <path d="M12 12 L12 19"/>
+      <path d="M12 6 L12 13 L7 16"/>
+      <path d="M12 13 L17 16"/>
+    </g>
+  </svg>
   <text x="300" y="330" fill="#FF6A00" font-family="Arial Black, Helvetica, sans-serif" font-size="92" font-weight="700" letter-spacing="-4">SHIPFRONT</text>
   <text x="300" y="400" fill="#F5F5F5" font-family="Helvetica, Arial, sans-serif" font-size="36">You Sell. We Ship. eCommerce at Scale</text>
 </svg>

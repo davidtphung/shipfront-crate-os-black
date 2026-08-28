@@ -1,8 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
   <rect width="180" height="180" fill="#000000"/>
-  <g transform="translate(45 36)" stroke="#FF6A00" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="4">
-    <path d="M45 6 L84 28.5 L45 51 L6 28.5 Z" fill="#000000"/>
-    <path d="M6 28.5 L45 51 L45 96 L6 73.5 Z" fill="#000000"/>
-    <path d="M84 28.5 L45 51 L45 96 L84 73.5 Z" fill="#000000"/>
-  </g>
+  <svg x="45" y="32" width="90" height="97.5" viewBox="0 0 24 26" fill="none">
+    <g stroke="#FF6A00" stroke-width="2.25" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="4">
+      <path d="M7 9 L12 6 L17 9 L12 12 Z" fill="#000000"/>
+      <path d="M7 9 L7 16 L12 19 L17 16 L17 9" fill="#000000"/>
+      <path d="M12 12 L12 19"/>
+      <path d="M12 6 L12 13 L7 16"/>
+      <path d="M12 13 L17 16"/>
+    </g>
+  </svg>
 </svg>
