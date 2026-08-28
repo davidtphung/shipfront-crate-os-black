@@ -4,6 +4,10 @@ Isolated black-ground sibling of [crate-os](https://davidtphung.github.io/shipfr
 
 Live: https://davidtphung.github.io/shipfront-crate-os-black/
 
+Public source: https://github.com/davidtphung/shipfront-crate-os-black
+
+The github.io path is served as a folder on the user Pages site so the dedicated repo does not have to own project Pages. Root `davidtphung.github.io` is unchanged.
+
 Copy is held from [myshipfront.com](https://www.myshipfront.com/) and live crate-os. Three pages: Home, Get a Quote, Contact.
 
 ## Run locally
