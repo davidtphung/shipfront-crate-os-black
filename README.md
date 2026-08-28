@@ -6,9 +6,11 @@ Live: https://davidtphung.github.io/shipfront-crate-os-black/
 
 Public source: https://github.com/davidtphung/shipfront-crate-os-black
 
-The github.io path is served as a folder on the user Pages site so the dedicated repo does not have to own project Pages. Root `davidtphung.github.io` is unchanged.
+GitHub Pages publishes `static-site/` to the `gh-pages` branch on push to `main`. Root `davidtphung.github.io` is unchanged.
 
 Copy is held from [myshipfront.com](https://www.myshipfront.com/) and live crate-os. Three pages: Home, Get a Quote, Contact.
+
+Home bands match live crate-os: You Sell. We Ship. / How Shipfront moves with you / Warehousing, fulfillment, ecommerce integrations, and location / Fulfillment looks and feels complicated / Customer success / Fast & Easy Quotes.
 
 ## Run locally
 
@@ -33,7 +35,7 @@ Static export writes to `out/`.
 - Accent: `#FF6A00`
 - Text: white / near-white
 - Lines: `#222`
-- Cube: hard-line isometric box, three faces, fill `#000`, stroke `#FF6A00`
+- Cube: SHEET 1A EVEN, viewBox `0 0 24 26`, fill `#000`, stroke `#FF6A00` at 2.25. Outer silhouette plus the three visible face edges (the Y). Brand lockup cubes paint at 27x30 (1.5x). Decorative stills stay as-is. No CSS rotateY / perspective / shear.
 - Wordmark: cube + SHIPFRONT
 - Footer: Built by David T Phung
 

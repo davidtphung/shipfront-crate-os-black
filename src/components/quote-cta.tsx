@@ -1,5 +1,4 @@
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import { QuoteForm } from "@/components/quote-form";
 
 export function QuoteCta() {
   return (
@@ -33,18 +32,8 @@ export function QuoteCta() {
           Please take a moment to give us some information. We have expert agents standing
           by to take care of your logistics needs.
         </p>
-        <div className="mt-8">
-          <Button
-            asChild
-            className="min-h-11 rounded-[12px] bg-[#FF6A00] px-5 text-[15px] font-medium text-black hover:bg-[#FF6A00] hover:brightness-95"
-          >
-            <Link href="/get-a-quote/">
-              Get a Quote
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256" aria-hidden="true">
-                <path d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z" />
-              </svg>
-            </Link>
-          </Button>
+        <div className="relative mt-10">
+          <QuoteForm />
         </div>
       </div>
     </section>

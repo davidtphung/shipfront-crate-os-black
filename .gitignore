@@ -40,3 +40,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+.playwright-mcp/
+/live-*.png
+/nav-*.png
+/local-*.png
+/quote-submit-three-fields.png

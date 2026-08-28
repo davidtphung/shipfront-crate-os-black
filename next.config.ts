@@ -8,6 +8,7 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   images: { unoptimized: true },
   basePath: isGithubPages ? `/${repo}` : "",
+  allowedDevOrigins: ["127.0.0.1"],
 };
 
 export default nextConfig;
