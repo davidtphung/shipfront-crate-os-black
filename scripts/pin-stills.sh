@@ -15,7 +15,6 @@ fetch() {
 
 fetch "procurement.jpg"
 fetch "parcels.jpg"
-fetch "route-nodes.jpg"
 fetch "logistics-usa.jpg"
 fetch "downtown-la.jpg"
 

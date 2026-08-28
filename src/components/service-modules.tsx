@@ -75,13 +75,8 @@ export function ServiceModules() {
             same-day delivery services.
           </p>
         </div>
-        <div className="overflow-hidden rounded-[20px] border border-[#222]">
-          <img
-            src={asset("/media/route-nodes.jpg")}
-            alt="Abstract route line connecting circular nodes on a pale surface"
-            className="h-full min-h-[240px] w-full object-cover"
-            loading="lazy"
-          />
+        <div className="overflow-hidden rounded-[20px] border border-[#222] bg-[#000000]">
+          <IntegrationsGraph />
         </div>
       </div>
       <div className="mt-8 overflow-hidden rounded-[20px] border border-[#222]">
@@ -122,5 +117,34 @@ export function ServiceModules() {
         </div>
       </div>
     </section>
+  );
+}
+
+function IntegrationsGraph() {
+  return (
+    <svg
+      viewBox="0 0 360 280"
+      className="h-full min-h-[240px] w-full"
+      role="img"
+      aria-label="Route nodes connecting sales channels"
+    >
+      <rect width="360" height="280" fill="#000000" />
+      <line x1="48" y1="220" x2="312" y2="60" stroke="#FF6A00" strokeWidth="2" />
+      <path
+        d="M90 196 C 150 120, 210 90, 270 84"
+        fill="none"
+        stroke="#FF6A00"
+        strokeWidth="2"
+      />
+      <path
+        d="M90 196 C 160 210, 230 140, 270 84"
+        fill="none"
+        stroke="#FF6A00"
+        strokeWidth="2"
+      />
+      <circle cx="90" cy="196" r="10" fill="#000000" stroke="#FF6A00" strokeWidth="2" />
+      <circle cx="270" cy="84" r="10" fill="#000000" stroke="#FF6A00" strokeWidth="2" />
+      <circle cx="186" cy="168" r="36" fill="#000000" stroke="#FF6A00" strokeWidth="2" />
+    </svg>
   );
 }
