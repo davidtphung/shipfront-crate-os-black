@@ -61,7 +61,7 @@
     document.querySelectorAll("[data-dot]").forEach(function (el) {
       var on = el.getAttribute("data-dot") === String(i);
       el.setAttribute("r", on ? "14" : "8");
-      el.setAttribute("fill", on ? "#FF6A00" : "#000000");
+      el.setAttribute("fill", "#000000");
       el.setAttribute("stroke", "rgba(255,255,255,0.38)");
     });
   }
