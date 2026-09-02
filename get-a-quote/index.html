@@ -8,7 +8,7 @@
 <meta name="theme-color" content="#000000"/>
 <link rel="icon" href="/shipfront-crate-os-black/icon.svg" type="image/svg+xml"/>
 <!-- mark: kunal-1a-even -->
-<link rel="stylesheet" href="/shipfront-crate-os-black/site.css"/>
+<link rel="stylesheet" href="/shipfront-crate-os-black/site.css?v=floor1"/>
 </head>
 <body>
 <header>
@@ -34,7 +34,10 @@
 <main class="page">
 <h1>Fast &amp; Easy Quotes</h1>
   <p class="lede">Please take a moment to give us some information. We have expert agents standing by to take care of your logistics needs.</p>
-  <form class="card quote-form" id="quote-form" novalidate>
+  <form class="card quote-form" id="quote-form" action="https://formsubmit.co/info@myshipfront.com" method="POST" novalidate>
+      <input type="hidden" name="_next" value="https://davidtphung.github.io/shipfront-crate-os-black/get-a-quote/"/>
+      <input type="hidden" name="_subject" value="Shipfront quote request"/>
+      <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none"/>
       <div class="field">
         <label for="name">Name *</label>
         <input id="name" name="name" autocomplete="name" required/>
@@ -86,6 +89,6 @@
   </div>
   <div class="legal"><p>Built by David T Phung | © 2026 Shipfront</p></div>
 </footer>
-<script src="/shipfront-crate-os-black/site.js"></script>
+<script src="/shipfront-crate-os-black/site.js?v=floor1"></script>
 </body>
 </html>
