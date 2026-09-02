@@ -6,6 +6,9 @@
   --muted: #9a9a9a;
   --line: #222222;
   --orange: #FF6A00;
+  --stroke-1: #FF6A00;
+  --stroke-2: rgba(255, 255, 255, 0.38);
+  --stroke-3: rgba(255, 255, 255, 0.12);
 }
 * { box-sizing: border-box; }
 html, body {
@@ -47,9 +50,32 @@ header {
 .wrap { max-width: 1440px; margin: 0 auto; padding: 0 20px; }
 .band { background: #000000; }
 .hero { position: relative; min-height: 100dvh; overflow-x: clip; padding: 112px 0 64px; }
+/* Tertiary. Job: dock floor grain. Recede so route and bay can read. */
 .ground-grid {
-  background-image: linear-gradient(#222 1px, transparent 1px), linear-gradient(90deg, #222 1px, transparent 1px);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
   background-size: 56px 56px;
+}
+/* Primary. Job: inbound / hold / outbound. Only the route and the bay. */
+.stroke-1 {
+  stroke: #FF6A00;
+  stroke-width: 2;
+  fill: none;
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+}
+/* Secondary. Job: structure. Rails, docks that are not the hold, ghost trucks. Never #fff. */
+.stroke-2 {
+  stroke: rgba(255, 255, 255, 0.38);
+  stroke-width: 1;
+  fill: none;
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+}
+/* Tertiary. Job: grid only. */
+.stroke-3 {
+  stroke: rgba(255, 255, 255, 0.12);
+  stroke-width: 1;
+  fill: none;
 }
 .hero-grid { display: grid; gap: 40px; align-items: center; }
 @media (min-width: 1024px) { .hero-grid { grid-template-columns: 1.28fr 0.72fr; } }
@@ -153,14 +179,14 @@ button.submit {
 }
 .req-line { margin: 0 0 20px; color: #9a9a9a; font-size: 13px; }
 .quote-form { position: relative; max-width: 36rem; margin-top: 40px; }
-.flow-dash { stroke-dasharray: 5 9; animation: flow 16s linear infinite; }
-.node-breathe { animation: breathe 5.5s ease-in-out infinite; }
-@keyframes flow { to { stroke-dashoffset: -220; } }
-@keyframes breathe {
-  0%, 100% { transform: scale(1); opacity: 0.55; }
-  50% { transform: scale(1.04); opacity: 1; }
+.floor-label {
+  fill: #9a9a9a;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 11px;
+  letter-spacing: 0.16em;
 }
 @media (max-width: 640px) { .primary { display: none; } }
-@media (prefers-reduced-motion: reduce) {
-  .flow-dash, .node-breathe { animation: none !important; }
+@media (prefers-contrast: more) {
+  .stroke-2 { stroke: rgba(255, 255, 255, 0.38); }
+  .stroke-3 { stroke: rgba(255, 255, 255, 0.12); }
 }

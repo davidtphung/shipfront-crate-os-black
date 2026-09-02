@@ -30,11 +30,6 @@
     document.querySelectorAll("[data-net]").forEach(function (el) {
       el.setAttribute("aria-pressed", el.getAttribute("data-net") === String(i) ? "true" : "false");
     });
-    var route = document.getElementById("net-route");
-    if (route) {
-      var p = (i + 1) / steps.length;
-      route.setAttribute("stroke-dasharray", p + " " + (1 - p));
-    }
   }
 
   document.querySelectorAll("[data-net]").forEach(function (el) {
@@ -67,6 +62,7 @@
       var on = el.getAttribute("data-dot") === String(i);
       el.setAttribute("r", on ? "14" : "8");
       el.setAttribute("fill", on ? "#FF6A00" : "#000000");
+      el.setAttribute("stroke", "rgba(255,255,255,0.38)");
     });
   }
   document.querySelectorAll("[data-process]").forEach(function (el) {
@@ -80,7 +76,6 @@
     function show(id, on) { document.getElementById(id).style.display = on ? "block" : "none"; }
     function val(id) { return document.getElementById(id).value.trim(); }
     form.addEventListener("submit", function (event) {
-      event.preventDefault();
       var name = val("name");
       var email = val("email");
       var phone = val("phone");
@@ -88,6 +83,9 @@
       show("name-error", !name);
       show("email-error", !email || !emailOk);
       show("phone-error", !phone);
+      if (!name || !email || !emailOk || !phone) {
+        event.preventDefault();
+      }
     });
   }
 })();
